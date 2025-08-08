@@ -1,7 +1,15 @@
-import kagglehub
+import os
 
-path = kagglehub.dataset_download("prajitdatta/movielens-100k-dataset")
-print("Path to dataset files:", path)
+# database
+file = open("data\imdb_top_1000.csv", mode="r")
+genres = file['Genre']
+rating = file['IMBD_rating']
+title = file['Series_Title']
+year = file['Release_Year']
+length = file['Runtime']
+overview = file['Overview']
+director = file['Director']
+lead = file['Star1']
 class MovieRecs:
     def __init__(self):
         self.self = self
